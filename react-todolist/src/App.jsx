@@ -5,14 +5,8 @@ import TodoList from "./components/TodoList.jsx";
 import TodoFooter from "./components/TodoFooter.jsx";
 import TodoFilters from "./components/TodoFilters.jsx";
 
-const DEFAULT_TODOS = [
-  { id: 1, text: "Complete online JavaScript course", completed: true },
-  { id: 2, text: "Jog around the park 3x", completed: false },
-  { id: 3, text: "10 minutes meditation", completed: false },
-  { id: 4, text: "Read for 1 hour", completed: false },
-  { id: 5, text: "Pick up groceries", completed: false },
-  { id: 6, text: "Complete Todo App on Frontend Mentor", completed: false },
-];
+const DEFAULT_TODOS = [];
+
 export default function App() {
   const [todos, setTodos] = useState(() => {
     const saved = localStorage.getItem("todos");

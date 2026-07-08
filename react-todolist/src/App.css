@@ -30,7 +30,7 @@ body {
   --text-completed: #4d5067;
   --border-color: #393a4b;
   --shadow: rgba(0, 0, 0, 0.4) 0px 35px 50px -15px;
-  --bg-image-desktop: url('./images/bg-desktop-dark.png');
+  --bg-image-desktop: url('./assets/bg-desktop-dark.jpg');
 }
 .light-theme {
   --body-bg: #fafafa;
@@ -41,7 +41,7 @@ body {
   --text-completed: #d1d2da;
   --border-color: #e3e4f1;
   --shadow: rgba(194, 195, 214, 0.5) 0px 35px 50px -15px;
-  --bg-image-desktop: url('./images/bg-desktop-light.png');
+  --bg-image-desktop: url('./assets/bg-desktop-light.jpg');
 }
 body {
   background-color: var(--body-bg);
@@ -112,7 +112,10 @@ body {
 .input-section {
   margin-bottom: 24px;
   box-shadow: var(--shadow);
+  width: 100%; /* ensure it stays full width */
+  box-sizing: border-box;
 }
+
 #new-todo-input {
   flex: 1;
   background: none;
@@ -122,6 +125,8 @@ body {
   color: var(--text-main);
   outline: none;
   margin-left: 24px;
+  width: 0; /* lets flex handle sizing without expanding the container */
+  min-width: 0;
 }
 #new-todo-input::placeholder {
   color: var(--text-muted);
@@ -157,7 +162,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color var(--transition-speed), background var(--transition-speed);
+  transition: border-color var(--transition-speed), --background var(--transition-speed);
   position: relative;
   z-index: 1;
 }
@@ -186,8 +191,12 @@ body {
   box-shadow: var(--shadow);
   overflow: hidden;
   margin-bottom: 24px;
-  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+  min-height: 60px;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);.input-section {
+  box-sizing: border-box;
 }
+}
+
 .todo-list {
   display: flex;
   flex-direction: column;
