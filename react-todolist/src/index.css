@@ -374,6 +374,6 @@ body {
     display: flex;
   }
   .todo-item .delete-btn {
-    opacity: 1; /* Keep it visible on touch screens */
+    opacity: 1; /* Keep it visible on phone screens */
   }
 }
