@@ -69,6 +69,7 @@ body {
   width: 100%;
   max-width: 540px;
   padding: 70px 24px 40px;
+  z-index: 1;
 }
 
 /* App Header (Logo & Toggle) */
