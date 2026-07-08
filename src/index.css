@@ -3,6 +3,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  margin: 0;
+  width: auto;
 }
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -64,7 +66,6 @@ body {
 /* Main Container Layout */
 .container {
   position: relative;
-  z-index: 2;
   width: 100%;
   max-width: 540px;
   padding: 70px 24px 40px;
@@ -154,7 +155,7 @@ body {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  z-index: 2;
+  
 }
 .checkbox-circle {
   width: 24px;
@@ -166,7 +167,7 @@ body {
   justify-content: center;
   transition: border-color var(--transition-speed), background var(--transition-speed);
   position: relative;
-  z-index: 1;
+
 }
 /* Checkbox hover effect: Gradient border when not checked */
 .checkbox-container:hover .todo-checkbox:not(:checked) + .checkbox-circle {
